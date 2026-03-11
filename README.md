@@ -2,7 +2,7 @@
 
 [![Open example in codesandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/github/react-pdf-dev/starter-rp-docusaurus-ts/main)
 
-Welcome to the React PDF Starter Toolkit! This repository provides a comprehensive guide on integrating React PDF with Docusaurus and TypeScript. It showcases how React PDF can be integrated and rendered as part of a React.js project.
+Welcome to the React PDF Kit Starter Toolkit! This repository provides a comprehensive guide on integrating React PDF with Docusaurus and TypeScript. It showcases how the React PDF Viewer component can be integrated and rendered as part of a React.js project.
 
 ## Table of Contents
 
@@ -18,7 +18,7 @@ Welcome to the React PDF Starter Toolkit! This repository provides a comprehensi
 1. **Clone the Repository**: If you haven't already, clone the repository and navigate into the project directory.
 
    ```bash
-   git clone https://github.com/pdf-viewer-react/starter-rp-docusaurus-ts.git
+   git clone https://github.com/react-pdf-kit/starter-rp-docusaurus-ts.git
    cd starter-rp-docusaurus-ts.git
    ```
 
@@ -36,7 +36,7 @@ Welcome to the React PDF Starter Toolkit! This repository provides a comprehensi
 
 ### Running the Example Project
 
-This repository includes an example project to demonstrate React PDF in action.
+This repository includes an example project to demonstrate React PDF Kit in action.
 
 1. **Start the Development Server**: Use the following command to start the development server
 
@@ -60,12 +60,12 @@ Once the example project is running, you can explore the source code to see how 
 
 ```tsx
 import {
-  RPDefaultLayout,
+  RPLayout,
   RPLayoutProps,
   RPPages,
   RPProvider,
   RPProviderProps,
-} from "@pdf-viewer/react";
+} from "@react-pdf-kit/viewer";
 import React, { type FC } from "react";
 
 interface IProps {
@@ -75,7 +75,7 @@ interface IProps {
 }
 
 const DEFAULT_PDF_URL =
-  "https://cdn.codewithmosh.com/image/upload/v1721763853/guides/web-roadmap.pdf";
+  "https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/web/compressed.tracemonkey-pldi-09.pdf";
 
 const AppPdfViewer: FC<Partial<IProps>> = (props) => {
   const { showToolbar = true, providerProps, defaultLayoutProps } = props;
@@ -83,9 +83,9 @@ const AppPdfViewer: FC<Partial<IProps>> = (props) => {
     <div>
       <RPProvider src={DEFAULT_PDF_URL} {...providerProps}>
         {showToolbar ? (
-          <RPDefaultLayout {...defaultLayoutProps}>
+          <RPLayout toolbar {...defaultLayoutProps}>
             <RPPages />
-          </RPDefaultLayout>
+          </RPLayout>
         ) : (
           <div style={{ width: "100%", height: "550px" }}>
             <RPPages />
@@ -104,7 +104,7 @@ export default AppPdfViewer;
 ```tsx
 import type { ReactNode } from "react";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import { RPConfig } from "@pdf-viewer/react";
+import { RPConfig } from "@react-pdf-kit/viewer";
 import AppPdfViewer from "../components/AppPdfViewer";
 
 export default function Home(): ReactNode {
@@ -147,7 +147,7 @@ For more examples, please refer to the `src/pages/index.tsx` file in this reposi
 
 _Remark: If you would like more examples, feel free open an issue._
 
-For more configurations, please check the [documentation](https://docs.react-pdf.dev) site.
+For more configurations, please check the [documentation](https://docs.react-pdf-kit.dev/) site.
 
 ## Meta
 
@@ -156,4 +156,4 @@ For more configurations, please check the [documentation](https://docs.react-pdf
 
 ---
 
-Thank you for using React PDF! We hope this toolkit helps you build amazing React.js applications. If you have any questions or need further assistance on this example, please feel free to open an issue. Happy coding!
+Thank you for using React PDF Kit! We hope this toolkit helps you build amazing React.js applications. If you have any questions or need further assistance on this example, please feel free to open an issue. Happy coding!

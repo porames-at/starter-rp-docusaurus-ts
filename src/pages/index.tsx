@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import { RPConfig } from "@pdf-viewer/react";
+import { RPConfig } from "@react-pdf-kit/viewer";
 import AppPdfViewer from "../components/AppPdfViewer";
 
 export default function Home(): ReactNode {
