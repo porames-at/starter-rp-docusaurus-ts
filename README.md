@@ -1,4 +1,4 @@
-# React PDF Starter Toolkit in Docusaurus and TypeScript
+# React PDF Starter Kit Toolkit in Docusaurus and TypeScript
 
 [![Open example in codesandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/github/react-pdf-dev/starter-rp-docusaurus-ts/main)
 
